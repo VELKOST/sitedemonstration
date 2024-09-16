@@ -1,0 +1,179 @@
+/* Contacts.module.css */
+
+.shape1 {
+  top: 4600px;
+  left: 0%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 40%;
+  height: auto;
+  z-index: -2;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(-180deg);
+  }
+  50% {
+    transform: rotate(-170deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.contacts {
+  padding-top: 200px;
+  text-align: center;
+  width: 70%;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+.text {
+  width: 100%;
+}
+
+.mainTitle {
+  background: linear-gradient(70deg, #88acfe 30%, #2562e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 55px;
+  line-height: 1.2;
+}
+
+.buttonGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 350px;
+  height: 100px; /* Фиксированная высота для всех кнопок */
+  margin-top: 50px;
+  background: transparent;
+  border: 2px solid;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 25px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(70deg, #88acfe 70%, #2562e1);
+  background-color: rgba(73, 88, 109, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+  display: flex; /* Использование flexbox */
+  flex-direction: column; /* Вертикальное выравнивание */
+  align-items: center; /* Горизонтальное выравнивание по центру */
+  justify-content: center; /* Вертикальное выравнивание по центру */
+  line-height: 1.5; /* Добавлено для вертикального выравнивания текста */
+}
+
+.subtext {
+  font-size: 18px;
+  color: gray;
+  margin-top: 10px; /* Отступ сверху для subtext */
+}
+
+
+
+
+.button:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1024px) {
+  .contacts {
+    width: 80%;
+  }
+
+  .mainTitle {
+    font-size: 45px;
+  }
+
+  .button {
+    width: 300px;
+    padding: 25px 70px;
+    font-size: 22px;
+  }
+
+  .subtext {
+    font-size: 16px;
+  }
+
+  .shape1 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    width: 90%;
+  }
+
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .button {
+    width: 250px;
+    padding: 20px 60px;
+    font-size: 20px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  .shape1 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    width: 95%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .mainTitle {
+    font-size: 35px;
+  }
+
+  .button {
+    width: 200px;
+    padding: 15px 50px;
+    font-size: 18px;
+  }
+
+  .subtext {
+    font-size: 12px;
+  }
+
+  .shape1 {
+    width: 70%;
+    left: 0%;
+    transform: translateX(-50%);
+  }
+}

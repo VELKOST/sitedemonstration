@@ -1,0 +1,270 @@
+/* BotFeatures.module.css */
+
+@keyframes float {
+  0% {
+    transform: rotate(-60deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: rotate(-180deg);
+  }
+  50% {
+    transform: rotate(-170deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.shape2 {
+  top: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 50%;
+  height: auto;
+  z-index: -2;
+  animation: float 10s ease-in-out infinite;
+}
+
+.shape3 {
+  top: 2800px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 50%;
+  height: auto;
+  z-index: -2;
+  animation: float2 10s ease-in-out infinite;
+}
+
+.informationSection {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto; /* Центрирование секции */
+  overflow-x: hidden;
+}
+
+.mainTitle {
+  margin-top: 170px;
+  margin-bottom: 40px;
+  background: linear-gradient(70deg, #88acfe 70%, #2562e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 45px;
+  line-height: 1.2;
+}
+
+.containerTitle {
+  color: whitesmoke;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 30px;
+  font-weight: 400;
+  padding: 20px;
+  background: linear-gradient(70deg, #88acfe 70%, #2562e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.groupContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 150px;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 300px; /* Минимальная ширина для текстовой колонки */
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  min-width: 300px; /* Минимальная ширина для колонки с изображением */
+}
+
+.imageColumn img {
+  max-height: 700px;
+  width: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gridItem {
+  padding: 20px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(70deg, #88acfe 70%, #2562e1);
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.gridItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.gridTitle {
+  display: inline-block;
+  margin: 0;
+  padding-left: 10px;
+  background: linear-gradient(70deg, #88acfe 70%, #2562e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.gridText {
+  text-align: left;
+  margin-top: 10px;
+  color: whitesmoke;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1024px) {
+  .informationSection {
+    width: 80%;
+  }
+
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .containerTitle {
+    font-size: 32px;
+  }
+
+  .groupContainer {
+    flex-direction: column;
+  }
+
+  .textColumn, .imageColumn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gridTitle {
+    font-size: 18px;
+  }
+
+  .gridText {
+    font-size: 16px;
+  }
+
+
+
+  .shape2, .shape3 {
+    width: 70%; /* Уменьшение ширины при сужении экрана */
+  }
+}
+
+@media (max-width: 768px) {
+  .informationSection {
+    width: 90%;
+  }
+
+  .mainTitle {
+    font-size: 35px;
+  }
+
+  .containerTitle {
+    font-size: 28px;
+  }
+
+  .groupContainer {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .gridTitle {
+    font-size: 16px;
+  }
+
+  .gridText {
+    font-size: 14px;
+  }
+
+
+
+  .shape2, .shape3 {
+    width: 50%; /* Уменьшение ширины при сужении экрана */
+  }
+}
+
+@media (max-width: 480px) {
+  .informationSection {
+    width: 95%;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .containerTitle {
+    font-size: 24px;
+  }
+
+  .gridTitle {
+    font-size: 14px;
+  }
+
+  .gridText {
+    font-size: 12px;
+  }
+
+  .groupContainer {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .textColumn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imageColumn {
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+  .shape2, .shape3 {
+    width: 50%; /* Уменьшение ширины при сужении экрана */
+    left: 0%;
+    transform: translateX(-50%);
+  }
+}

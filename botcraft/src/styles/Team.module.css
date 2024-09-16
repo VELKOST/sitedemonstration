@@ -1,0 +1,165 @@
+/* Team.module.css */
+
+@keyframes float {
+  0% {
+    transform: rotate(-180deg);
+  }
+  50% {
+    transform: rotate(-170deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.shape4 {
+  top: 3800px;
+  right: -5%;
+  transform: translateX(50%);
+  position: absolute;
+  width: 50%;
+  height: auto;
+  z-index: -2;
+  animation: float 10s ease-in-out infinite;
+}
+
+.team {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  background: linear-gradient(70deg, #88acfe 30%, #2562e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 45px;
+  line-height: 1.2;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.profile {
+  text-align: center;
+  margin: 20px;
+  flex: 1 1 300px;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10%;
+}
+
+.caption {
+  margin-top: 20px;
+}
+
+.highlight {
+  color: #2562e1;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: whitesmoke;
+}
+
+.position {
+  color: #aaaaaa;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1024px) {
+  .team {
+    width: 80%;
+  }
+
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .profileImage {
+    max-width: 250px;
+  }
+
+  .name {
+    font-size: 1.3em;
+  }
+
+  .position {
+    font-size: 1em;
+  }
+
+  .shape4 {
+    top: 3800px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    width: 90%;
+  }
+
+  .mainTitle {
+    font-size: 35px;
+  }
+
+  .profileImage {
+    max-width: 200px;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+
+  .position {
+    font-size: 0.9em;
+  }
+
+  .shape4 {
+    top: 3800px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .team {
+    width: 95%;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .profileImage {
+    max-width: 150px;
+  }
+
+  .name {
+    font-size: 1em;
+  }
+
+  .position {
+    font-size: 0.8em;
+  }
+
+  .shape4 {
+    top: 3800px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

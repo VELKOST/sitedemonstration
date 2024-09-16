@@ -1,0 +1,36 @@
+/* Footer.css */
+.footer {
+  background-color: rgba(136, 136, 136, 0.1); /* Прозрачный фон */
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0px;
+  background: linear-gradient(70deg, #88acfe 30%, #2562e1) ; /* Градиентная полоска */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Обеспечивает отображение контента поверх полоски */
+}
+
+.footer .logo {
+  width: 100px; /* Измените размер по необходимости */
+  margin-bottom: 10px;
+}
+
+.footer .text {
+  color: #fff;
+  font-size: 14px;
+}
